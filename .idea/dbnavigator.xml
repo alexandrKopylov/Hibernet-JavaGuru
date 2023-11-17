@@ -33,6 +33,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
+      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="consoles/Connection" />
+      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/users" />
       <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/users" />
     </open-files>
   </component>
@@ -368,8 +370,6 @@
           <content-type name="PL/SQL" enabled="true" />
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
-          <content-type name="Groovy" enabled="true" />
-          <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Manifest" enabled="true" />
         </content-types>
