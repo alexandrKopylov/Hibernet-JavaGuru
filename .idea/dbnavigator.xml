@@ -13,14 +13,14 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5f16e98b-ab1d-413d-ae1f-8d42d167a852">
-      <console name="Connection" type="STANDARD" schema="javaguru" session="Main"><![CDATA[CREATE TABLE users
+      <console name="Connection" type="STANDARD" schema="javaguru" session="Main">CREATE TABLE users
 (
 	username VARCHAR(128) PRIMARY KEY,
 	firstname VARCHAR(128),
 	lastname VARCHAR(128),
 	birth_date DATE,
 	role VARCHAR(32)
-);]]></console>
+);</console>
     </connection>
     <connection id="2f8ad361-9265-4631-ac99-c53ac50905aa">
       <console name="Connection 1" type="STANDARD" schema="" session="Main" />
@@ -32,11 +32,7 @@
     </last-used-providers>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="consoles/Connection" />
-      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/users" />
-      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/users" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" dataset="javaguru.users" active-filter-id="EMPTY_FILTER" />
@@ -370,6 +366,8 @@
           <content-type name="PL/SQL" enabled="true" />
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
+          <content-type name="Groovy" enabled="true" />
+          <content-type name="AIDL" enabled="true" />
           <content-type name="YAML" enabled="true" />
           <content-type name="Manifest" enabled="true" />
         </content-types>

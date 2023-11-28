@@ -28,6 +28,10 @@ public class User {
     private User() {
     }
 
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
     private User(UserBuilder userBuilder) {
         this.username = userBuilder.username;
         this.firstname = userBuilder.firstname;
