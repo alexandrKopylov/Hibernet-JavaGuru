@@ -18,6 +18,7 @@
         <property name="format_sql">true</property>
 
         <mapping class="entity.User"></mapping>
+        <mapping class="entity.Company"></mapping>
         
 <!--        <mapping class="com.app.pojo.Student"></mapping>-->
 <!--        <mapping class="com.app.pojo.Emploee"></mapping>-->

@@ -1,7 +1,4 @@
-import entity.Birthday;
-import entity.BirthdayConverter;
-import entity.Role;
-import entity.User;
+import entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -17,6 +14,8 @@ public class HibernateRunner {
 
     public static void main(String[] args) {
 
+Company company = new Company("GGG");
+
 
 //   создали  юзера     статус -  transient
         User user = new User.UserBuilder()
@@ -25,6 +24,7 @@ public class HibernateRunner {
                 .setLastName("Kop")
                 .setBirthDate(new Birthday(LocalDate.of(2000, 01, 01)))
                 .setRole(Role.USER)
+                .setCompany(company)
                 .build();
 
       //  log.info("user object is transient state {}", user);
@@ -38,8 +38,8 @@ public class HibernateRunner {
 
 
             // базовые команды  в нhibernete
-
-             session.save(user);      // сохраняем юзера в базу даннных
+            session.save(company);
+            // session.save(user);      // сохраняем юзера в базу даннных
 
 
             //  session.update(user);     // будет обновлять юзера ,  может выдать исключение
@@ -53,7 +53,7 @@ public class HibernateRunner {
             // User user1 =  session.get (User.class , "111");   // получить юзера  из базы данных по ключу id
 
             // System.out.println(user1);
-log.debug("user: {} , session {}  ", user , session);
+//log.debug("user: {} , session {}  ", user , session);
             session.getTransaction().commit();
         } catch (Exception ex){
             log.error("Exeptio accured" , ex);

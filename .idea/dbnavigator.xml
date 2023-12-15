@@ -13,14 +13,25 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="5f16e98b-ab1d-413d-ae1f-8d42d167a852">
-      <console name="Connection" type="STANDARD" schema="javaguru" session="Main">CREATE TABLE users
+      <console name="Connection" type="STANDARD" schema="javaguru" session="Main"><![CDATA[CREATE TABLE company
 (
-	username VARCHAR(128) PRIMARY KEY,
+	 Id INT PRIMARY KEY,
+	name VARCHAR(64) NOT NULL UNIQUE
+	
+);
+
+
+CREATE TABLE users
+(
+    id INT,
+	username VARCHAR(128),
 	firstname VARCHAR(128),
 	lastname VARCHAR(128),
 	birth_date DATE,
-	role VARCHAR(32)
-);</console>
+	role VARCHAR(32),
+	company_id INT  REFERENCES company (Id),
+	PRIMARY KEY (id)
+);]]></console>
     </connection>
     <connection id="2f8ad361-9265-4631-ac99-c53ac50905aa">
       <console name="Connection 1" type="STANDARD" schema="" session="Main" />
@@ -32,10 +43,14 @@
     </last-used-providers>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/company" />
+      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/users" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" dataset="javaguru.users" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" dataset="javaguru.company" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />

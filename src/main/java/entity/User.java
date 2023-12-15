@@ -25,6 +25,10 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @ManyToOne
+    @JoinColumn (name = "company_id")
+    private Company company;
+
     private User() {
     }
 
@@ -38,6 +42,7 @@ public class User {
         this.lastname = userBuilder.lastname;
         this.birthDate = userBuilder.birthDate;
         this.role = userBuilder.role;
+        this.company = userBuilder.company;
     }
 
     public static class UserBuilder {
@@ -46,6 +51,7 @@ public class User {
         private String lastname;
         private Birthday birthDate;
         private Role role;
+        private Company company;
 
         public UserBuilder() {
         }
@@ -72,6 +78,11 @@ public class User {
 
         public UserBuilder setRole(Role role) {
             this.role = role;
+            return this;
+        }
+
+        public UserBuilder setCompany(Company company) {
+            this.company = company;
             return this;
         }
 
