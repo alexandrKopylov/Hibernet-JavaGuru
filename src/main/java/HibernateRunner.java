@@ -14,18 +14,18 @@ public class HibernateRunner {
 
     public static void main(String[] args) {
 
-Company company = new Company("GGG");
+Company ggg = new Company("GGG");
 
 
 //   создали  юзера     статус -  transient
-        User user = new User.UserBuilder()
-                .setUserName("333")
-                .setFirstName("alexx")
-                .setLastName("Kop")
-                .setBirthDate(new Birthday(LocalDate.of(2000, 01, 01)))
-                .setRole(Role.USER)
-                .setCompany(company)
-                .build();
+//        User user = new User.UserBuilder()
+//                .setUserName("333")
+//                .setFirstName("alexx")
+//                .setLastName("Kop")
+//                .setBirthDate(new Birthday(LocalDate.of(2000, 01, 01)))
+//                .setRole(Role.USER)
+//                .setCompany(ggg)
+//                .build();
 
       //  log.info("user object is transient state {}", user);
 
@@ -38,7 +38,7 @@ Company company = new Company("GGG");
 
 
             // базовые команды  в нhibernete
-            session.save(company);
+            session.save(ggg);
             // session.save(user);      // сохраняем юзера в базу даннных
 
 
@@ -50,13 +50,13 @@ Company company = new Company("GGG");
 
             ///  session.delete(user);      //  удаляет узера
 
-            // User user1 =  session.get (User.class , "111");   // получить юзера  из базы данных по ключу id
+          //  Company  user1 =  session.get (Company.class , 1);   // получить юзера  из базы данных по ключу id
 
-            // System.out.println(user1);
+           //  System.out.println(user1);
 //log.debug("user: {} , session {}  ", user , session);
             session.getTransaction().commit();
         } catch (Exception ex){
-            log.error("Exeptio accured" , ex);
+           // log.error("Exeptio accured" , ex);
             throw ex;
         }
     }

@@ -15,8 +15,9 @@
     <connection id="5f16e98b-ab1d-413d-ae1f-8d42d167a852">
       <console name="Connection" type="STANDARD" schema="javaguru" session="Main"><![CDATA[CREATE TABLE company
 (
-	 Id INT PRIMARY KEY,
-	name VARCHAR(64) NOT NULL UNIQUE
+	 `id` INT UNSIGNED ,
+	name VARCHAR(64) NOT NULL UNIQUE,
+	PRIMARY KEY (`id`)
 	
 );
 
@@ -45,7 +46,6 @@ CREATE TABLE users
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
       <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/company" />
-      <object connection-id="5f16e98b-ab1d-413d-ae1f-8d42d167a852" object-ref="schemas/javaguru/tables/users" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
