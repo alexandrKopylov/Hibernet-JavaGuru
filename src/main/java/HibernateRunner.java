@@ -15,6 +15,7 @@ public class HibernateRunner {
     public static void main(String[] args) {
 
 Company ggg = new Company("GGG");
+        Company bbb = new Company("BBB");
 
 
 //   создали  юзера     статус -  transient
@@ -39,6 +40,7 @@ Company ggg = new Company("GGG");
 
             // базовые команды  в нhibernete
             session.save(ggg);
+            session.save(bbb);
             // session.save(user);      // сохраняем юзера в базу даннных
 
 
